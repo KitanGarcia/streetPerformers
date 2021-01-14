@@ -1,0 +1,12 @@
+{
+  "name": "streetPerformers",
+  "displayName": "streetPerformers",
+  "expo": {
+    "name": "streetPerformers",
+    "slug": "streetPerformers",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
