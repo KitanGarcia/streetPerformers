@@ -4,16 +4,19 @@ const windowHeight = Dimensions.get("window").height;
 const windowWidth = Dimensions.get("window").width;
 
 const styles = StyleSheet.create({
+  allPages: {
+    alignItems: "center"
+  }, //aligns everything to horizontal center
+
   pageTitle: {
     fontSize: 50
   },
 
-  registerField: {
+  registerLoginField: {
     borderBottomColor: "lightblue",
-
     borderBottomWidth: StyleSheet.hairlineWidth,
     marginTop: 40,
-    marginLeft: .25 * windowWidth,
+    //marginLeft: .25 * windowWidth,     Handle other margins like this when flex box/justify content/align items doesn't cut it
     width: .5 * windowWidth
   },
 
@@ -23,11 +26,17 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    marginLeft: .25 * windowWidth,
     height: 60,
     width: .5 * windowWidth
   },
-  registerText: {
+
+  registerLoginText: {
+  },
+
+  registerContinue: {
+    top: .23 * windowHeight,
+    fontSize: 20,
+    marginLeft: .70 * windowWidth
   }
 });
 

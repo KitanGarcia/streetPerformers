@@ -3,11 +3,20 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import Register from "./components/Register";
+import Login from "./components/Login";
 
 export default function App() {
+  let displayLogin = true;
+  let loginOrRegister = <Register />
+  if (displayLogin) {
+    loginOrRegister = <Login />
+  }
+
+  //need refined logic to tell which screen to display between login and register
+
   return (
     <View style={styles.container}>
-      <Register />
+      {loginOrRegister}
       <StatusBar style="auto" />
     </View>
   );
