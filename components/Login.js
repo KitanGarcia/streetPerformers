@@ -12,10 +12,10 @@ class Login extends React.Component {
 
 
         <TextInput style = {styles.registerLoginField}
-          value = "Username"
+          placeholder = "Username"
         />
         <TextInput style = {styles.registerLoginField}
-          value = "Password"
+          placeholder = "Password"
         />
 
         <TouchableOpacity

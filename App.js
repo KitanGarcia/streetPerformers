@@ -6,7 +6,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 
 export default function App() {
-  let displayLogin = true;
+  let displayLogin = false;
   let loginOrRegister = <Register />
   if (displayLogin) {
     loginOrRegister = <Login />

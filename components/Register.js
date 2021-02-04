@@ -3,6 +3,33 @@ import { StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-nativ
 import styles from "./styles"
 
 class Register extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+      username: "",
+      password: ""
+    };
+
+    this.setEmail = this.setEmail.bind(this);
+    this.setUsername = this.setUsername.bind(this);
+    this.setPassword = this.setPassword.bind(this);
+  }
+
+  setEmail = (event) => {
+    console.log(event.target.value);
+  }
+
+  setUsername(event) {
+    console.log(event.target.value);
+    this.setState({username: username});
+  }
+
+  setPassword(password) {
+    console.log(this.state.password);
+    this.setState({password: password});
+  }
+
   render() {
     return (
       <View style = {styles.allPages}>
@@ -15,13 +42,19 @@ class Register extends React.Component {
         <Text>Register to perform, or continue to view performances near you</Text>
 
         <TextInput style = {styles.registerLoginField}
-          value = "Email"
+          placeholder = "Email"
+          value = {this.state.email}
+          onChange = {this.setEmail}
         />
         <TextInput style = {styles.registerLoginField}
-          value = "Username"
+          placeholder = "Username"
+          value = {this.state.username}
+          onChange = {this.setUsername}
         />
         <TextInput style = {styles.registerLoginField}
-          value = "Password"
+          placeholder = "Password"
+          value = {this.state.password}
+          onChange = {this.setPassword}
         />
 
         <TouchableOpacity
